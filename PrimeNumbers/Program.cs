@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace PrimeNumbers
 {
@@ -7,6 +8,9 @@ namespace PrimeNumbers
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            
             List<int> primeNumbers = new List<int>();
             int numbersLimit = 1000;
 
@@ -26,8 +30,22 @@ namespace PrimeNumbers
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine($"{primeNumbers.Count} Prime numbers in the set of 1-{numbersLimit}.");
-            Console.ReadKey();
+            stopwatch.Stop();
 
+            Console.WriteLine($"Time {stopwatch.Elapsed}");
+            
+            Console.WriteLine("Prime Sieve Of Eratosthenes method");
+
+            stopwatch.Reset();
+
+            stopwatch.Start();
+            1000.isPrimeSieveOfEratosthenes();
+
+            stopwatch.Stop();
+            Console.WriteLine();
+            Console.WriteLine($"Time {stopwatch.Elapsed}");
+
+            Console.ReadKey();
         }
     }
 }
