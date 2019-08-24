@@ -6,15 +6,10 @@ namespace ChinemaChain{
         public string Name{get;set;}
         public int ScreenSize{get;set;}
 
-        public int Seats{get;set;}
-        public int VipSeats{get;set;}
-
-        public ChinemaHall(string n, int s, int seats, int vipseats)
+        public ChinemaHall(string n, int s)
         {
             Name = n;
             ScreenSize = s;
-            Seats = seats;
-            VipSeats = vipseats;
         }
 
     }
