@@ -66,7 +66,6 @@ namespace ChinemaChain
                 c.Print();
             }
 
-
             Tiket TiketType1 = new Tiket("Standard", 300);
             Tiket TiketType2 = new Tiket("VIP", 600);
             Tiket TiketType3 = new Tiket("Student", 200);
